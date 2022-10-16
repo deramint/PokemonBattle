@@ -25,7 +25,7 @@ namespace PokemonRPG
                         case 2:
                             Console.WriteLine("\nこちらが現在登録されているモンスター一覧です。");
                             MonsterList monsterList = new MonsterList();
-                            monsterList.AddAllMonsterList();
+                            monsterList.ReadAllMonsterData();
                             monsterList.ShowAllMonsterList();
                             Console.WriteLine("メニューへ戻ります。\n\n\n\n");
                             break;
@@ -104,7 +104,7 @@ namespace PokemonRPG
         {
             int monsterCounter = 0;
             MonsterList monsterList = new MonsterList();
-            monsterList.AddAllMonsterList();
+            monsterList.ReadAllMonsterData();
             foreach (string[] monsterData in monsterList.allMonsterList)
             {
                 if (monsterData[10] == "True")
@@ -125,7 +125,7 @@ namespace PokemonRPG
         {
             Console.WriteLine("\nこちらが現在登録されているモンスター一覧です。");
             MonsterList monsterList = new MonsterList();
-            monsterList.AddAllMonsterList();
+            monsterList.ReadAllMonsterData();
             monsterList.ShowAllMonsterList();
             while (true)
             {

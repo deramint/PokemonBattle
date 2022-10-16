@@ -30,7 +30,7 @@ namespace PokemonRPG
                 Console.WriteLine($"「{i + 1}」体目のモンスターNoを選んでください。");
                 //MonsterListインスタンス生成後、モンスター一覧を表示
                 MonsterList monsterList = new MonsterList();
-                monsterList.AddAllMonsterList();
+                monsterList.ReadAllMonsterData();
                 monsterList.ShowAllMonsterList();
                 while (true)
                 {
@@ -132,7 +132,7 @@ namespace PokemonRPG
                 monsterArray[11] = "True";
 
                 MonsterList monsterList = new MonsterList();
-                monsterList.AddAllMonsterList();
+                monsterList.ReadAllMonsterData();
                 int num = selectedIndexNumbers[i] - 1;
                 monsterList.allMonsterList[num] = monsterArray;
                 monsterList.SavingAllMonsterList();

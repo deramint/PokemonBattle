@@ -22,7 +22,7 @@ namespace PokemonRPG
 
 
         //モンスターの情報を読み取り、allMonsterListへ登録するメソッド
-        public void AddAllMonsterList()
+        public void ReadAllMonsterData()
         {
             Console.WriteLine(path);
             //最新のモンスターデータをテキストファイルから１行ずつ読み込み、[,]で区切り配列化、それをさらにフィールドリストのallMonsterListに追加
@@ -119,7 +119,7 @@ namespace PokemonRPG
         //NowHpの全回復、LifeAndDeathをtrueに
         public void PokemonCenter()
         {
-            AddAllMonsterList();
+            ReadAllMonsterData();
             for (int i = 0; i < allMonsterList.Count; i++)
             {
                 string[] monster = allMonsterList[i];
@@ -142,7 +142,7 @@ namespace PokemonRPG
         public void CreateMonster()
         {
             Console.WriteLine("\nこちらは現在登録されているモンスター一覧です。");
-            AddAllMonsterList();
+            ReadAllMonsterData();
             ShowAllMonsterList();
 
             int point = 100;
