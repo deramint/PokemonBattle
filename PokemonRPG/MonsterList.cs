@@ -13,12 +13,18 @@ namespace PokemonRPG
     {
         public List<string[]> allMonsterList = new List<string[]>();//ストリング配列が入るリスト
         public List<int> deadMonsterNoList = new List<int>();
-        string path = @"/Users/minato/Projects/PokemonRPG/PokemonRPG/PokemonData.txt";
+        //絶対パス
+        //string path = @"/Users/minato/Projects/PokemonRPG/PokemonRPG/PokemonData.txt";
+        //相対パス
+        static string dir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        string path = dir.Replace("bin/Debug/net6.0", "PokemonData.txt");
+
 
 
         //モンスターの情報を読み取り、allMonsterListへ登録するメソッド
         public void AddAllMonsterList()
         {
+            Console.WriteLine(path);
             //最新のモンスターデータをテキストファイルから１行ずつ読み込み、[,]で区切り配列化、それをさらにフィールドリストのallMonsterListに追加
             using (StreamReader sr = new StreamReader(path))
             {
