@@ -11,11 +11,11 @@ namespace PokemonRPG
     //瀕死のポケモンは別ファイルに保存され、利用できなくなる。
     public class MonsterList
     {
-        public List<string[]> allMonsterList = new List<string[]>();//ストリング配列が入るリスト
+        public List<string[]> allMonsterList = new List<string[]>();
         public List<int> deadMonsterNoList = new List<int>();
         //絶対パス
         //string path = @"/Users/minato/Projects/PokemonRPG/PokemonRPG/PokemonData.txt";
-        //相対パス
+        //相対パス ビルド後の実行ファイルはソースファイルと場所が異なるため、パスを一部置換
         static string dir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         string path = dir.Replace("bin/Debug/net6.0", "PokemonData.txt");
 
