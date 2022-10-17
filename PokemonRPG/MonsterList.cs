@@ -24,7 +24,6 @@ namespace PokemonRPG
         //モンスターの情報を読み取り、allMonsterListへ登録するメソッド
         public void ReadAllMonsterData()
         {
-            Console.WriteLine(path);
             //最新のモンスターデータをテキストファイルから１行ずつ読み込み、[,]で区切り配列化、それをさらにフィールドリストのallMonsterListに追加
             using (StreamReader sr = new StreamReader(path))
             {
@@ -145,7 +144,7 @@ namespace PokemonRPG
             ReadAllMonsterData();
             ShowAllMonsterList();
 
-            int point = 100;
+            int point = 150;
             string[] monsterArray = new string[12];
             string[] fieldTitle = new string[]
             {
@@ -182,7 +181,7 @@ namespace PokemonRPG
                 //int
                 else if(i == 3 || i == 5 || i == 6 || i == 7)
                 {
-                    Console.WriteLine("\n合計100ポイントを「体力」「攻撃力」「防御力」「すばやさ」に振り分けます。\n推奨　体力:30以上　攻撃力:20~30　防御力:20以下　すばやさ:5以下");
+                    Console.WriteLine("\n合計100ポイントを「体力」「攻撃力」「防御力」「すばやさ」に振り分けます。\n推奨　体力:80以上　攻撃力:20以上　防御力:20以下　すばやさ:5以下");
                     while (true)
                     {
                         Console.Write($"{fieldTitle[i]}には何ポイント振り分けますか？　残りポイント:{point}\n＞＞");
