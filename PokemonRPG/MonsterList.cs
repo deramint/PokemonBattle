@@ -16,8 +16,8 @@ namespace PokemonRPG
         //絶対パス
         //string path = @"/Users/minato/Projects/PokemonRPG/PokemonRPG/PokemonData.txt";
         //相対パス ビルド後の実行ファイルはソースファイルと場所が異なるため、パスを一部置換
-        static string dir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string path = dir.Replace("bin/Debug/net6.0", "PokemonData.txt");
+        static string dirpath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);//実行ファイルのpathを取得
+        string path = dirpath.Replace(@"bin\Debug\net6.0", "PokemonData.txt");//置換
 
 
 
