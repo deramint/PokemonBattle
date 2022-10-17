@@ -120,6 +120,8 @@ namespace PokemonRPG
                 }
                 Console.WriteLine("");
                 counter++;
+                Thread.Sleep(200);
+
             }
             Console.WriteLine("\n\t\t\t\t\t※ 相手モンスターより有利な属性だと攻撃力が２倍になります。　火＜水, 水＜草, 草＜火");
             Console.WriteLine("\t\t\t\t\t※ 必殺技は１ターンの溜めを必要とし、通常攻撃力の1~3倍の攻撃力になります。");
