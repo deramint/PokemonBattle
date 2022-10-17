@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+//
 namespace PokemonRPG
 {
     //このクラスではモンスター情報を外部テキストファイルから生成してオブジェクトをリスト化。
